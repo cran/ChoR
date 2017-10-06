@@ -18,4 +18,3 @@ Get an undirected graph representing the cliques from a Chordalysis object.
 \details{
 The undirected graph use the graph package from Bioconductor.
 }
-

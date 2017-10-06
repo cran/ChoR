@@ -25,4 +25,3 @@ If it is provided, its size must be equal to the number of attributes.
 Else, its values will be computed from the data, and the cardinality for an attribute will be accurate only
 if all its possible values appear at least once in the data.
 }
-

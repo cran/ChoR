@@ -28,4 +28,3 @@ and "Scaling log-linear analysis to datasets with thousands of variables, SDM 20
 \dontrun{ res = ChoR.MML(data) }
 \dontrun{ res = ChoR.MML(data, c(3, 5, 4, 4, 3, 2, 3, 3)) }
 }
-

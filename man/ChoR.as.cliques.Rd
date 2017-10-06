@@ -15,4 +15,3 @@ A list of cliques, a clique being a list of attributes'name, i.e. a list of list
 \description{
 Get the list of cliques associated to a chordalysis object.
 }
-

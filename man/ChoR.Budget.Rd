@@ -34,4 +34,3 @@ from the dataframe, but not accurate if some possible values never show up. See 
 \dontrun{ res = ChoR.Budget(data, budgetShare=0.0) }
 \dontrun{ res = ChoR.Budget(data, 0.05, card = c(3, 5, 4, 4, 3, 2, 3, 3)) }
 }
-

@@ -15,4 +15,3 @@ a formula representing the model
 \description{
 Extract the formula from a Chordalysis object.
 }
-

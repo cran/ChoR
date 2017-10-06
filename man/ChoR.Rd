@@ -31,6 +31,11 @@ for most datasets.
 options( java.parameters = "-Xmx4g" )
 library(ChoR)
 
+## Test JAVA version
+jv <- rJava::.jcall("java/lang/System", "S", "getProperty", "java.runtime.version")
+jvn <- as.numeric(paste0(strsplit(jv, "[.]")[[1L]][1:2], collapse = "."))
+if(jvn < 1.8){ stop("Java 8 is needed for this package but not available") }
+
 # Helper function for graph printing. Require Rgraphviz:
 # source("https://bioconductor.org/biocLite.R")
 # biocLite("Rgraphviz")
@@ -69,31 +74,12 @@ print(NR.cl)
 NR.fo = ChoR.as.formula(MR.res)
 print(NR.fo)
 # ## As a graph
-NR.gr = ChoR.as.graph(MR.res)
-printGraph(NR.gr)
-
-
-
-###### Solar flare #####
-SF.data =
-  read.csv( "https://archive.ics.uci.edu/ml/machine-learning-databases/solar-flare/flare.data2",
-            sep               = "",       # White spaces
-            skip              = 1,
-            header            = FALSE,
-            stringsAsFactors  = FALSE,
-            check.names       = TRUE
-          )
-
-# Remove last 3 columns (classes, not attributes)
-SF.data = SF.data[-11:-13]
-# Give meaningful names
-colnames(SF.data) = c(  "ClassCode", "LSpotSizeCode", "DistCode", "Activity",
-                        "Evolution", "PrevActivity", "HistoricallyComplex", "BecomeComplex",
-                        "Area", "AreaLSpot")
-# Chordalysis
-SF.res = ChoR.SMT(SF.data, card = c(7, 6, 4, 2, 3, 3, 2, 2, 2, 2))
-SF.gr = ChoR.as.graph(SF.res)
-printGraph(SF.gr)
+if(requireNamespace("graph", quietly=TRUE)){
+  NR.gr = ChoR.as.graph(MR.res)
+  printGraph(NR.gr)
+} else {
+  print("'graph' package not installed; Skipping 'as graph' example.")
+}
 
 
 
@@ -109,8 +95,39 @@ T.data =
 colnames(T.data) = c(   "Class", "Age", "Sex", "Survived" )
 # Chordalysis
 T.res = ChoR.SMT(T.data, card = c(4, 2, 2, 2))
-T.gr = ChoR.as.graph(T.res)
-printGraph(T.gr)
+
+if(requireNamespace("graph", quietly=TRUE)){
+  T.gr = ChoR.as.graph(T.res)
+  printGraph(T.gr)
+}
+
+
+
+####### Solar flare #####
+#SF.data =
+#  read.csv( # "https://archive.ics.uci.edu/ml/machine-learning-databases/solar-flare/flare.data2",
+#            "https://raw.githubusercontent.com/jeffheaton/proben1/master/flare/flare.data2",
+#            sep               = "",       # White spaces
+#            skip              = 1,
+#            header            = FALSE,
+#            stringsAsFactors  = FALSE,
+#            check.names       = TRUE
+#          )
+#
+## Remove last 3 columns (classes, not attributes)
+#SF.data = SF.data[-11:-13]
+## Give meaningful names
+#colnames(SF.data) = c(  "ClassCode", "LSpotSizeCode", "DistCode", "Activity",
+#                        "Evolution", "PrevActivity", "HistoricallyComplex", "BecomeComplex",
+#                        "Area", "AreaLSpot")
+## Chordalysis
+#SF.res = ChoR.SMT(SF.data, card = c(7, 6, 4, 2, 3, 3, 2, 2, 2, 2))
+#
+#if(requireNamespace("graph", quietly=TRUE)){
+#  SF.gr = ChoR.as.graph(SF.res)
+#  printGraph(SF.gr)
+#}
+#
 }
 \references{
 See citation("ChoR")
@@ -118,4 +135,3 @@ See citation("ChoR")
 \keyword{linear-log-analysis}
 \keyword{model}
 \keyword{package}
-

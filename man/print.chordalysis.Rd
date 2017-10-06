@@ -18,4 +18,3 @@ A String representation of the model.
 Create a String representation of a model, compatible with the formula interface,
 e.g. "~a*b*c+...+e*f*g".
 }
-

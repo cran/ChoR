@@ -31,4 +31,3 @@ from the dataframe, but may not be accurate if some possible values never show u
 \dontrun{ res = ChoR.SMT(data, 0.05, c(3, 5, 4, 4, 3, 2, 3, 3)) }
 \dontrun{ res = ChoR.SMT(data, card = c(3, 5, 4, 4, 3, 2, 3, 3)) }
 }
-

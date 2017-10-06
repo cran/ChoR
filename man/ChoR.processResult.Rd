@@ -24,4 +24,3 @@ The numbers (+1 for indice correction) are replaced with the corresponding colum
 and the string is split in a list of cliques, a cliques being a list of name.
 For example, "~ 0*1*2 + 3*4*5" gives the two cliques [[ [[0,1,2]], [[3,4,5]] ]]
 }
-
