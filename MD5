@@ -1,11 +1,11 @@
-845554cf40fd0fc22e960d02f8d2e035 *DESCRIPTION
-c1affaee62df13062971ad8b8ce2cc6e *NAMESPACE
+9da27f31750b5412290b5debbc1aca2e *DESCRIPTION
+bcf7682d04334e5860a85125e23298de *NAMESPACE
 f461f6e9fc7e1348e6de8a8bfa9007e5 *R/choR-package.R
 67a46cd241dc3437b9a3dd3f4807108e *R/choR.R
-e41365025f6cc69160e9cd0daf96e0f6 *R/onLoad.R
+b72883497cb8709e9d78f42e07079d78 *R/onLoad.R
 ddeaba117efbe63fe01a8676fa9b812d *inst/CITATION
 093b167bbba13bad1f50fa2ac07b8efd *inst/examples/script.R
-e9f4bb9ba15bd8d9cb71e333ee78875a *inst/java/choR.jar
+82e042512ce2d6d4ed983ff72d442d12 *inst/java/choR.jar
 10d757af81295971cf0979b359cfb265 *inst/java/core.jar
 5d3c7543443dfb4e1f5bd7f4fcb8b680 *inst/java/jayes.jar
 7413fff38c080003e8ce68ee6566cf11 *inst/java/jgrapht-jdk1.6.jar
@@ -43,7 +43,7 @@ ce5062eae7cfc542f8de1f8467063da5 *java/bin/core/stats/scorer/GraphActionScorerMM
 a6bab95cfa6569ea5574f73ee0f35c14 *java/bin/core/stats/scorer/GraphActionScorerPValue.class
 21937c9168b03e2f56666e44cb115b26 *java/bin/core/tools/ChiSquared.class
 f5c0095eca365aa8907a87d0da80cd9f *java/bin/loader/LoadArrays.class
-e9f4bb9ba15bd8d9cb71e333ee78875a *java/choR.jar
+82e042512ce2d6d4ed983ff72d442d12 *java/choR.jar
 10d757af81295971cf0979b359cfb265 *java/lib/core.jar
 5d3c7543443dfb4e1f5bd7f4fcb8b680 *java/lib/core/jayes.jar
 7413fff38c080003e8ce68ee6566cf11 *java/lib/core/jgrapht-jdk1.6.jar
