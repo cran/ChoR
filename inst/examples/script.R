@@ -4,11 +4,6 @@
 options( java.parameters = "-Xmx4g" )
 library(ChoR)
 
-## Test JAVA version
-jv <- rJava::.jcall("java/lang/System", "S", "getProperty", "java.runtime.version")
-jvn <- as.numeric(paste0(strsplit(jv, "[.]")[[1L]][1:2], collapse = "."))
-if(jvn < 1.8){ stop("Java 8 is needed for this package but not available") }
-
 # Helper function for graph printing. Require Rgraphviz:
 # source("https://bioconductor.org/biocLite.R")
 # biocLite("Rgraphviz")
@@ -21,9 +16,12 @@ printGraph = function(x){
 
 
 ###### MUSHROOM #####
-# We read the data from internet: http://repository.seasr.org/Datasets/UCI/csv/mushroom.csv
+# We are using a partial UCI mushroom data set (the example should not be too long)
+MR.url = system.file("extdata", "mushrooms.csv", package = "ChoR", mustWork = TRUE)
+
 MR.data =
-  read.csv(  "http://repository.seasr.org/Datasets/UCI/csv/mushroom.csv",
+  read.csv(
+              MR.url,
               header            = TRUE,             # Here, we have a header
               na.strings        = c("NA","?",""),   # Configure the missing values
               stringsAsFactors  = FALSE,            # Keep strings for now
@@ -57,8 +55,12 @@ if(requireNamespace("graph", quietly=TRUE)){
 
 
 ###### Titanic #####
+# We are using the titanix data set
+
+MR.url = system.file("extdata", "titanic.dat.txt", package = "ChoR", mustWork = TRUE)
+
 T.data =
-  read.csv( "https://ww2.amstat.org/publications/jse/datasets/titanic.dat.txt",
+  read.csv( MR.url,
             sep               = "",       # White spaces
             header            = FALSE,
             stringsAsFactors  = FALSE
@@ -73,31 +75,3 @@ if(requireNamespace("graph", quietly=TRUE)){
   T.gr = ChoR.as.graph(T.res)
   printGraph(T.gr)
 }
-
-
-
-####### Solar flare #####
-#SF.data =
-#  read.csv( # "https://archive.ics.uci.edu/ml/machine-learning-databases/solar-flare/flare.data2",
-#            "https://raw.githubusercontent.com/jeffheaton/proben1/master/flare/flare.data2",
-#            sep               = "",       # White spaces
-#            skip              = 1,
-#            header            = FALSE,
-#            stringsAsFactors  = FALSE,
-#            check.names       = TRUE
-#          )
-#
-## Remove last 3 columns (classes, not attributes)
-#SF.data = SF.data[-11:-13]
-## Give meaningful names
-#colnames(SF.data) = c(  "ClassCode", "LSpotSizeCode", "DistCode", "Activity",
-#                        "Evolution", "PrevActivity", "HistoricallyComplex", "BecomeComplex",
-#                        "Area", "AreaLSpot")
-## Chordalysis
-#SF.res = ChoR.SMT(SF.data, card = c(7, 6, 4, 2, 3, 3, 2, 2, 2, 2))
-#
-#if(requireNamespace("graph", quietly=TRUE)){
-#  SF.gr = ChoR.as.graph(SF.res)
-#  printGraph(SF.gr)
-#}
-#

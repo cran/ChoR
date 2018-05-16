@@ -1,11 +1,14 @@
-9da27f31750b5412290b5debbc1aca2e *DESCRIPTION
+c7d440134320c165fc4bdf09cbf24b71 *DESCRIPTION
 bcf7682d04334e5860a85125e23298de *NAMESPACE
 f461f6e9fc7e1348e6de8a8bfa9007e5 *R/choR-package.R
 67a46cd241dc3437b9a3dd3f4807108e *R/choR.R
-b72883497cb8709e9d78f42e07079d78 *R/onLoad.R
+a0c43a183fe860129626386c60d20465 *R/onLoad.R
 ddeaba117efbe63fe01a8676fa9b812d *inst/CITATION
-093b167bbba13bad1f50fa2ac07b8efd *inst/examples/script.R
-82e042512ce2d6d4ed983ff72d442d12 *inst/java/choR.jar
+fbbfe1052a323daafe3c2f4a19e68e59 *inst/examples/script.R
+0a4b78e7cc76093828bf50e50cd1d3f7 *inst/extdata/mmmmm
+83007278b68258769860fb2f1b515411 *inst/extdata/mushrooms.csv
+6534f1675da8c33bd248b8e0cea9d24d *inst/extdata/titanic.dat.txt
+3273f6ab1d5c41df144ab99692d709f2 *inst/java/choR.jar
 10d757af81295971cf0979b359cfb265 *inst/java/core.jar
 5d3c7543443dfb4e1f5bd7f4fcb8b680 *inst/java/jayes.jar
 7413fff38c080003e8ce68ee6566cf11 *inst/java/jgrapht-jdk1.6.jar
@@ -43,7 +46,7 @@ ce5062eae7cfc542f8de1f8467063da5 *java/bin/core/stats/scorer/GraphActionScorerMM
 a6bab95cfa6569ea5574f73ee0f35c14 *java/bin/core/stats/scorer/GraphActionScorerPValue.class
 21937c9168b03e2f56666e44cb115b26 *java/bin/core/tools/ChiSquared.class
 f5c0095eca365aa8907a87d0da80cd9f *java/bin/loader/LoadArrays.class
-82e042512ce2d6d4ed983ff72d442d12 *java/choR.jar
+3273f6ab1d5c41df144ab99692d709f2 *java/choR.jar
 10d757af81295971cf0979b359cfb265 *java/lib/core.jar
 5d3c7543443dfb4e1f5bd7f4fcb8b680 *java/lib/core/jayes.jar
 7413fff38c080003e8ce68ee6566cf11 *java/lib/core/jgrapht-jdk1.6.jar
@@ -51,7 +54,7 @@ f40552704cb6eb8c7e14d668f91f781a *java/lib/lib-readme.txt
 0d2dfa95b99bf332c48560dca61870e8 *java/src/choR/ChoR.java
 a9d3d97ecf089632e4ba30eac39ab9ac *man/ChoR.Budget.Rd
 3cb01f5d0ae6ce4f9912b30f8a83c7c1 *man/ChoR.MML.Rd
-68feb4a4e1ff82525ed3bfe8f489975c *man/ChoR.Rd
+f8c4057d26f98d16d6ce52c481ae7b5d *man/ChoR.Rd
 376b0cfc057eda0b836722890a8dee58 *man/ChoR.SMT.Rd
 71e5e4bd9e6bc081577c91a0f83677c7 *man/ChoR.as.cliques.Rd
 b16b69308c3a9fe697af6a64d976d6d9 *man/ChoR.as.formula.Rd
